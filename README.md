@@ -11,7 +11,7 @@
 
 ##配置步骤
 
-由于代码依赖openCV和numpy，因此需要做（windows 10, py2.7.12下测试通过，其他情况请自行修改。）：
+由于代码依赖openCV和numpy，因此需要做（windows 10, python 2.7.12下测试通过，其他情况请自行修改。）：
 
 1. 把 opencv\python\2.7\x86 下的 cv2.pyd 拷贝到 C:\Python27\Lib\site-packages 中；
 2. 环境变量增加 当前路径\opencv\ffmpeg；
