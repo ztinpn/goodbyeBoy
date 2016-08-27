@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-  
 
-
 if __name__ == '__main__':
-    
-
-    
     import cv2  
     video_src = cv2.VideoCapture('template/template.mp4')
     fps = video_src.get(cv2.cv.CV_CAP_PROP_FPS)  
@@ -12,8 +8,7 @@ if __name__ == '__main__':
             int(video_src.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT))) 
     video_tar = cv2.VideoWriter('temp_output.avi', cv2.cv.CV_FOURCC('I','4','2','0'), fps, size)  
 
-    #读帧  
-    success, frame = video_src.read()  
+    success, frame = video_src.read()#读取第一帧，判断是否可读。
 
     src_img = cv2.imread("src.jpg")#读取用户图像
     src_hei, src_width = src_img.shape[:2]#读取用户图像高度宽度
@@ -41,7 +36,6 @@ if __name__ == '__main__':
 
     frame_ind = 0#帧号，便于定位
     while success:
-
         if frame_ind>=45 and frame_ind<=475:
             frame[79:340,79:408]=0#加黑边
             frame[top_left_pos_tar[0]:top_left_pos_tar[0]+tar_height,
