@@ -44,7 +44,7 @@ if __name__ == '__main__':
             frame[top_left_pos_tar[0]:top_left_pos_tar[0]+tar_height,
                   top_left_pos_tar[1]:top_left_pos_tar[1]+tar_width]=img2
         frame_ind=frame_ind+1
-        print "处理中...%%%.2f " % (100.0*frame_ind/645)
+        print u"处理中...%%%.2f " % (100.0*frame_ind/645)
         video_tar.write(frame) #写视频帧  
         success, frame = video_src.read() #获取下一帧
 
@@ -53,9 +53,10 @@ if __name__ == '__main__':
     video_tar.release()
 
     import os
+    os.system('del final_output.mp4')#删除上一次的结果
     os.system('ffmpeg.win32.exe -i template/template.mp3  -i temp_output.avi final_output.mp4')#音频视频混流
     os.system('del temp_output.avi')#删除中间文件
-    print "完成！"
+    print u"完成！"
 
 
 
