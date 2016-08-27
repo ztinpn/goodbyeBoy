@@ -3,6 +3,7 @@
 ##效果
 
 上传用户头像，产生《非诚勿扰》节目全灭灯的恶搞视频，可用于QQ、微信聊天等场景（可用微信PC版上传视频）。
+可下载 https://github.com/ztinpn/goodbyeboy/blob/master/template/template.mp4?raw=true 查看示例。
 
 ##用法
 
