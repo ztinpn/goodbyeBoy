@@ -2,6 +2,9 @@
 
 
 if __name__ == '__main__':
+    
+
+    
     import cv2  
     video_src = cv2.VideoCapture('template/template.mp4')
     fps = video_src.get(cv2.cv.CV_CAP_PROP_FPS)  
@@ -52,9 +55,9 @@ if __name__ == '__main__':
     video_src.release()
     video_tar.release()
 
-    import os
-    os.system('del final_output.mp4')#删除上一次的结果
-    os.system('ffmpeg.win32.exe -i template/template.mp3  -i temp_output.avi final_output.mp4')#音频视频混流
+    import os,datetime
+    final_output_filename=datetime.datetime.strftime(datetime.datetime.now(), '%Y%m%d_%H_%M_%S.mp4')#最终视频文件名
+    os.system('ffmpeg.win32.exe -i template/template.mp3  -i temp_output.avi '+final_output_filename)#音频视频混流
     os.system('del temp_output.avi')#删除中间文件
     print u"完成！"
 
