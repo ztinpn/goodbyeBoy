@@ -14,7 +14,7 @@
 由于代码依赖openCV和numpy，因此需要做（windows 10, python 2.7.12下测试通过，其他情况请自行修改。）：
 
 1. 把 opencv\python\2.7\x86 下的 cv2.pyd 拷贝到 C:\Python27\Lib\site-packages 中；
-2. windouws系统环境变量增加 当前路径\opencv\ffmpeg；
+2. windows系统环境变量增加 当前路径\opencv\ffmpeg；
 3. 去https://sourceforge.net/projects/numpy/files/NumPy/1.9.2/ 下载numpy-1.9.2-win32-superpack-python2.7.exe并安装。
 
 
